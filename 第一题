@@ -1,0 +1,21 @@
+//先排序，再求最小差值
+#include<ioscream>
+#include<cstdio>
+#include<cstring>
+#include<algorithm>
+#include<cmath>
+int main(){
+   int n;
+   int a[1005];
+   scanf("%d",&n);
+   for(int i=0;i<n;i++)
+   scanf("%d",&a[i]);
+   sort(a,a+n);
+   int ans=10000;
+   for(i=1;i<n;i++)
+   if(ans>a[i]-a[i-1])
+   ans=a[i]-a[i-1];
+   printf("%d",ans);
+   return 0;
+}
+
